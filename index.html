@@ -1,1 +1,497 @@
-index.html
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydroPure | Premium RO & UV Water Purifiers & AMC Services</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="HydroPure designs and services premium RO and UV water purifiers. Secure an Annual Maintenance Contract (AMC) and track filter replacements via our customer dashboard.">
+  <meta name="keywords" content="Water Purifier, RO Purifier, UV Purifier, Annual Maintenance Contract, AMC, Filter Replacement, HydroPure">
+  <meta name="author" content="HydroPure Water Purifier Sales & Service Company">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="HydroPure | Premium RO & UV Water Purifiers">
+  <meta property="og:description" content="Get premium RO and UV water purifiers with annual maintenance contracts and a customer tracking dashboard.">
+  <meta property="og:image" content="assets/images/hero-system.png">
+  <meta property="og:type" content="website">
+ 
+  <!-- Favicon Mock -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M 5 10 C 7 8, 9 12, 12 10 C 15 8, 16 12, 18.5 10'/><path d='M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 18.5 14'/></svg>">
+
+  <!-- CDNs: Bootstrap 5, Lucide Icons, Three.js -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/dark-mode.css" rel="stylesheet">
+  <link href="assets/css/rtl.css" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HydroPure Water Purifier Sales & Service Company",
+      "url": "index.html",
+      "logo": "assets/images/hero-system.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-555-0199",
+        "contactType": "customer service",
+        "areaServed": "Global"
+      }
+    }
+  </script>
+</head>
+<body class="home-white-text">
+
+  <!-- Custom Page Loading Spinner -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-waves">
+      <div class="loader-wave-element"></div>
+      <div class="loader-wave-element"></div>
+      <div class="loader-wave-element"></div>
+    </div>
+    <h2 class="fs-6 mt-3 tracking-widest text-uppercase text-muted">HydroPure</h2>
+  </div>
+
+  <!-- WebGL Background Canvas Container -->
+  <div id="webgl-canvas-container" class="canvas-bg" aria-hidden="true"></div>
+
+        <!-- Header Section -->
+  <header class="fixed-top">
+    <nav class="navbar premium-navbar navbar-expand-xl py-0" aria-label="Main Navigation">
+      <div class="container">
+        
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html" id="brand-logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: var(--accent-color); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M 5 10 C 7 8, 9 12, 12 10 C 15 8, 17 12, 19 10" />
+            <path d="M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 19 14" />
+          </svg>
+          HydroPure
+        </a>
+
+        <!-- Custom Controls (Desktop) -->
+        <div class="d-none d-xl-flex align-items-center gap-3 order-xl-3">
+          <button id="dir-toggle" class="toggle-btn" aria-label="Toggle language direction">RTL</button>
+          <button id="theme-toggle" class="toggle-btn" aria-label="Toggle dark mode"></button>
+          <a href="login.html" class="btn btn-premium btn-sm">Login</a>
+          <a href="dashboard.html" class="btn btn-premium btn-sm">Account</a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Offcanvas Mobile Navigation Menu -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-xl-center">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i data-lucide="chevron-down" class="nav-dropdown-icon"></i></a>
+                <ul class="dropdown-menu shadow-lg" aria-labelledby="homeDropdown">
+                  <li><a class="dropdown-item active" href="index.html">Home 1</a></li>
+                  <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services <i data-lucide="chevron-down" class="nav-dropdown-icon"></i></a>
+                <ul class="dropdown-menu shadow-lg" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="residential.html">Residential</a></li>
+                  <li><a class="dropdown-item" href="solutions.html">AMC</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Support</a>
+              </li>
+              
+              <!-- Mobile-only Controls -->
+              <li class="nav-item d-xl-none mt-4">
+                <div class="d-flex gap-3 align-items-center justify-content-center">
+                  <button onclick="document.getElementById('theme-toggle').click()" class="toggle-btn" aria-label="Toggle Theme mobile">🌓</button>
+                  <button onclick="document.getElementById('dir-toggle').click()" class="toggle-btn" aria-label="Toggle direction mobile">RTL/LTR</button>
+                </div>
+              </li>
+              <li class="nav-item d-xl-none mt-3">
+                <div class="d-flex flex-column gap-2">
+                  <a href="login.html" class="btn btn-premium w-100">Login</a>
+                  <a href="dashboard.html" class="btn btn-premium w-100">Account</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero-wrapper d-flex align-items-center">
+      <div class="container hero-content py-5">
+        <div class="row align-items-center g-5 text-start">
+          <div class="col-lg-6">
+            <h1 class="hero-title mb-4">Pure Water, Managed Effortlessly</h1>
+            <p class="body-lead mb-5">Premium RO & UV water purifiers for homes and offices. Keep your system running at peak performance with smart AMC plans, automatic filter replacement tracking, and our customer portal.</p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="login.html" class="btn btn-premium">Access Customer Portal</a>
+              <a href="solutions.html" class="btn btn-premium-outline">Explore AMC Plans</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image-wrapper p-2 border border-info-subtle bg-light-gradient rounded-4 overflow-hidden shadow">
+              <img src="assets/images/hero-system.png" alt="Advanced multi-stage RO and UV purifier system" class="img-fluid rounded-3 w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Water Solutions Overview Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center mb-5 text-center">
+          <div class="col-lg-8">
+            <span class="text-uppercase tracking-widest text-muted fs-7">Our Systems & Plans</span>
+            <h2 class="section-title mt-2 mb-3">Purifiers & AMC Overview</h2>
+            <p class="text-secondary mb-0 mx-auto" style="max-width: 600px;">Providing standard domestic purifiers, heavy-duty commercial RO plants, and active maintenance coverage to keep water pristine.</p>
+          </div>
+        </div>
+
+        <div class="solutions-grid mt-5">
+          <!-- Panel 1 -->
+          <div class="solution-panel">
+            <div>
+              <span class="solution-panel-tag">RO Purifiers</span>
+              <h3 class="mt-3 mb-4">Reverse Osmosis Systems</h3>
+              <p class="text-secondary">Multi-stage RO systems designed to eliminate heavy metals, dissolved solids, and chemical impurities from drinking water sources.</p>
+            </div>
+            <div class="mt-4">
+              <a href="residential.html" class="btn btn-premium-outline btn-sm">Explore RO Models</a>
+            </div>
+          </div>
+
+          <!-- Panel 2 -->
+          <div class="solution-panel">
+            <div>
+              <span class="solution-panel-tag">UV Purifiers</span>
+              <h3 class="mt-3 mb-4">UV Purification Units</h3>
+              <p class="text-secondary">High-intensity Ultraviolet chambers that instantly deactivate biological pathogens, bacteria, and viruses without changing water taste.</p>
+            </div>
+            <div class="mt-4">
+              <a href="solutions.html#technology" class="btn btn-premium-outline btn-sm">Learn About UV Tech</a>
+            </div>
+          </div>
+
+          <!-- Panel 3 -->
+          <div class="solution-panel">
+            <div>
+              <span class="solution-panel-tag">AMC Plans</span>
+              <h3 class="mt-3 mb-4">Annual Maintenance Contracts</h3>
+              <p class="text-secondary">Complete annual care plans offering scheduled filter replacements, booster pump warranty protection, and quick support visits.</p>
+            </div>
+            <div class="mt-4">
+              <a href="solutions.html" class="btn btn-premium-outline btn-sm">View AMC Plans</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Water Purity Standards Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span class="text-uppercase tracking-widest text-muted fs-7">Certifications</span>
+            <h2 class="section-title mt-2">Purification Standards</h2>
+            <p class="text-secondary mt-3">Every HydroPure system is certified to eliminate toxic heavy metals, biological contaminants, and balance pH and TDS levels perfectly.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <!-- Standard 1 -->
+          <div class="col-md-4">
+            <div class="industry-card">
+              <div class="industry-icon">
+                <i data-lucide="droplets" width="48" height="48"></i>
+              </div>
+              <h3 class="h5 mb-3">TDS Control</h3>
+              <p class="text-secondary mb-0">Maintains Total Dissolved Solids within healthy WHO drinking guidelines, preserving essential minerals.</p>
+            </div>
+          </div>
+          <!-- Standard 2 -->
+          <div class="col-md-4">
+            <div class="industry-card">
+              <div class="industry-icon">
+                <i data-lucide="microscope" width="48" height="48"></i>
+              </div>
+              <h3 class="h5 mb-3">Pathogen Protection</h3>
+              <p class="text-secondary mb-0">UV-C sanitization ensuring 99.99% elimination of waterborne viruses, bacteria, and cysts.</p>
+            </div>
+          </div>
+          <!-- Standard 3 -->
+          <div class="col-md-4">
+            <div class="industry-card">
+              <div class="industry-icon">
+                <i data-lucide="glass-water" width="48" height="48"></i>
+              </div>
+              <h3 class="h5 mb-3">Alkaline Balancing</h3>
+              <p class="text-secondary mb-0">Enhances drinking water with active mineral cartridges to promote natural body pH balance.</p>
+            </div>
+          </div>
+          <!-- Standard 4 -->
+          <div class="col-md-6 mt-lg-4">
+            <div class="industry-card">
+              <div class="industry-icon">
+                <i data-lucide="shield-check" width="48" height="48"></i>
+              </div>
+              <h3 class="h5 mb-3">AMC Warranty Shield</h3>
+              <p class="text-secondary mb-0">Under our maintenance plans, booster pumps, RO membranes, and sensors are covered against failures.</p>
+            </div>
+          </div>
+          <!-- Standard 5 -->
+          <div class="col-md-6 mt-lg-4">
+            <div class="industry-card">
+              <div class="industry-icon">
+                <i data-lucide="file-check-2" width="48" height="48"></i>
+              </div>
+              <h3 class="h5 mb-3">IoT Telemetry Monitoring</h3>
+              <p class="text-secondary mb-0">Real-time alerts via your customer dashboard when filters approach end-of-life status.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Technology & Process Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span class="text-uppercase tracking-widest text-muted fs-7">How We Service Your Purifier</span>
+            <h2 class="section-title mt-2">Our Service Process</h2>
+            <p class="text-secondary mt-3">Maintaining clean water is an active, structured process. Here is how we support you year-round.</p>
+          </div>
+        </div>
+
+        <!-- Timeline layout -->
+        <div class="process-timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-card">
+              <div class="timeline-num">01</div>
+              <h3 class="h4 mb-3">Water Quality Check</h3>
+              <p class="text-secondary mb-0">Our service technicians test input TDS levels, hardness, and chemical impurities to customize purifier filtration rates.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-card">
+              <div class="timeline-num">02</div>
+              <h3 class="h4 mb-3">Filter Replacement</h3>
+              <p class="text-secondary mb-0">Technicians clean the unit and swap sediment, carbon, and RO membrane filters at pre-scheduled intervals to keep water pure.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item left">
+            <div class="timeline-card">
+              <div class="timeline-num">03</div>
+              <h3 class="h4 mb-3">Sanitization</h3>
+              <p class="text-secondary mb-0">Using UV-C sterilization chambers and ozone sanitizers to thoroughly disinfect storage tanks and flow channels.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item right">
+            <div class="timeline-card">
+              <div class="timeline-num">04</div>
+              <h3 class="h4 mb-3">Quality Log update</h3>
+              <p class="text-secondary mb-0">We log TDS and performance details directly to your customer dashboard for future reference and transparency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Why Choose Us Section -->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="solid-theme-bg p-4 p-md-5 rounded-4 shadow-sm">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <span class="text-uppercase tracking-widest text-info fs-7 fw-semibold">Proven Performance</span>
+              <h2 class="section-title mt-2 mb-4">Why Choose HydroPure</h2>
+              <p class="text-secondary mb-4">We combine cutting-edge filtration science and convenient digital tracking to safeguard your family's health.</p>
+              
+              <ul class="list-unstyled d-flex flex-column gap-3 mt-4">
+                <li class="d-flex align-items-start gap-3">
+                  <i data-lucide="cpu" width="32" height="32" class="text-info mt-1"></i>
+                  <div>
+                    <h4 class="h6 mb-1">Smart Customer Dashboard</h4>
+                    <p class="text-secondary mb-0">Log in anytime to see plan status, service logs, and schedule visits instantly.</p>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i data-lucide="leaf" width="32" height="32" class="text-info mt-1"></i>
+                  <div>
+                    <h4 class="h6 mb-1">Eco-Conscious Tech</h4>
+                    <p class="text-secondary mb-0">High-recovery membranes that reduce wastewater by 50% compared to standard purifiers.</p>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i data-lucide="layers" width="32" height="32" class="text-info mt-1"></i>
+                  <div>
+                    <h4 class="h6 mb-1">Custom AMC Coverage</h4>
+                    <p class="text-secondary mb-0">Plans designed for standard domestic units up to commercial purifiers.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="row g-4 text-center">
+                <div class="col-6">
+                  <div class="stat-box border p-3 p-md-4 h-100 d-flex flex-column justify-content-center">
+                    <div class="stat-number" data-target="9500" data-suffix="+">0</div>
+                    <span class="text-uppercase tracking-widest text-secondary fs-8">Happy Families</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-box border p-3 p-md-4 h-100 d-flex flex-column justify-content-center">
+                    <div class="stat-number" data-target="48" data-suffix="h">0</div>
+                    <span class="text-uppercase tracking-widest text-secondary fs-8">Response Time</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-box border p-3 p-md-4 h-100 d-flex flex-column justify-content-center">
+                    <div class="stat-number" data-target="150" data-suffix="K">0</div>
+                    <span class="text-uppercase tracking-widest text-secondary fs-8">Visits Logged</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-box border p-3 p-md-4 h-100 d-flex flex-column justify-content-center">
+                    <div class="stat-number" data-target="15" data-suffix="+">0</div>
+                    <span class="text-uppercase tracking-widest text-secondary fs-8">Years of Service</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Engineering Inquiry CTA Section -->
+    <section class="py-5 bg-dark text-white text-center position-relative overflow-hidden">
+      <!-- Glow background -->
+      <div class="position-absolute top-50 start-50 translate-middle w-50 h-50 bg-info rounded-circle opacity-10 blur-50" style="filter: blur(80px);"></div>
+      <div class="container py-5 position-relative z-1">
+        <h2 class="section-title text-white mb-3">Secure Your Pure Water Today</h2>
+        <p class="lead opacity-75 mb-5 max-w-600 mx-auto text-white">Purchase a premium RO/UV unit or enroll your existing purifier into a maintenance plan.</p>
+        <a href="solutions.html" class="btn btn-info btn-premium text-dark bg-info border-info px-5">Explore Purchase & AMC Plans</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="premium-footer">
+    <div class="container">
+      <div class="row g-5">
+        
+        <div class="col-lg-4">
+          <a class="footer-logo mb-3" href="index.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="stroke: var(--accent-color); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; width: 32px; height: 32px;">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M 5 10 C 7 8, 9 12, 12 10 C 15 8, 17 12, 19 10" />
+            <path d="M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 19 14" />
+          </svg>
+            HydroPure
+          </a>
+          <p class="text-secondary mt-3">Providing premium RO & UV water purifiers, annual maintenance contracts (AMC), and customized commercial filtration services.</p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase tracking-wider mb-4">Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="solutions.html" class="footer-link">AMC Plans</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="login.html" class="footer-link">Customer Portal</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase tracking-wider mb-4">Resources</h3>
+          <ul class="list-unstyled">
+            <li><a href="coming-soon.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="coming-soon.html" class="footer-link">User Manuals</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h3 class="h6 text-uppercase tracking-wider mb-4">Newsletter</h3>
+          <p class="text-secondary mb-3">Subscribe to our newsletter for health tips and filter care advice.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit" class="btn btn-premium text-white border-white">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="row pt-5 mt-5 border-top align-items-center justify-content-between">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="text-secondary mb-0">&copy; 2026 HydroPure. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" class="scroll-top" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- JS CDNs: Bootstrap 5, Three.js, Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+/*
+ * Dark Mode Theme Overrides
+ * Near-black backgrounds, high contrast text, and glowing accents
+ */
+
+[data-theme="dark"] {
+  --bg-primary: #030712; /* Near Black */
+  --bg-secondary: #061f14; /* Deep Tech Sage/Mint Black-Green */
+  --text-primary: #f8fafc; /* High Contrast White */
+  --text-secondary: #e2e8f0; /* Muted Slate Gray -> High Contrast Light Gray */
+  --accent-color: #34d399; /* Bright Electric Mint Green */
+  --accent-light: rgba(52, 211, 153, 0.1);
+  --border-color: #0c3e27; /* Dark Sage borders */
+  --glass-bg: rgba(3, 7, 18, 0.75);
+  --glass-border: rgba(12, 62, 39, 0.8);
+  --card-shadow: 0 4px 30px rgba(52, 211, 153, 0.05);
+}
+
+/* Base Adjustments */
+[data-theme="dark"] body {
+  background-color: var(--bg-primary);
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath d='M 0,40 Q 50,20 100,40 T 200,40' fill='none' stroke='rgba(52, 211, 153, 0.03)' stroke-width='1.5'/%3E%3Cpath d='M 0,140 Q 50,120 100,140 T 200,140' fill='none' stroke='rgba(52, 211, 153, 0.03)' stroke-width='1.5'/%3E%3Ccircle cx='30' cy='80' r='6' fill='none' stroke='rgba(52, 211, 153, 0.05)' stroke-width='1.2'/%3E%3Ccircle cx='30' cy='80' r='1.5' fill='rgba(52, 211, 153, 0.04)'/%3E%3Ccircle cx='160' cy='60' r='8' fill='none' stroke='rgba(52, 211, 153, 0.04)' stroke-width='1.2'/%3E%3Ccircle cx='158' cy='58' r='2' fill='rgba(52, 211, 153, 0.03)'/%3E%3Ccircle cx='90' cy='170' r='5' fill='none' stroke='rgba(52, 211, 153, 0.06)' stroke-width='1'/%3E%3Ccircle cx='120' cy='100' r='10' fill='none' stroke='rgba(52, 211, 153, 0.03)' stroke-width='1.5'/%3E%3Ccircle cx='117' cy='97' r='2.5' fill='rgba(52, 211, 153, 0.02)'/%3E%3Ccircle cx='50' cy='180' r='3' fill='none' stroke='rgba(52, 211, 153, 0.05)' stroke-width='1'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 0% 0%, rgba(52, 211, 153, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(52, 211, 153, 0.04) 0%, transparent 40%);
+  background-attachment: fixed;
+  background-repeat: repeat, no-repeat, no-repeat;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Custom adjustments for elements */
+[data-theme="dark"] .btn-premium {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-premium.text-white {
+  color: var(--bg-primary) !important;
+}
+
+[data-theme="dark"] .btn-premium:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--bg-primary) !important;
+}
+
+[data-theme="dark"] .btn-premium-outline {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-premium-outline:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* Inputs & Form Controls */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] .form-select::placeholder {
+  color: #64748b;
+}
+
+[data-theme="dark"] .form-select {
+  /* Replace the black default chevron arrow with a white one */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* Bootstrap Accordion Overrides */
+[data-theme="dark"] .accordion-item {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .accordion-button {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: var(--border-color);
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1);
+}
+
+/* Tables in Dark Mode */
+[data-theme="dark"] .table-premium th {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+[data-theme="dark"] .table-premium td {
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+}
+
+/* Offcanvas and Modal */
+[data-theme="dark"] .offcanvas {
+  background-color: var(--bg-primary);
+  border-left: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .offcanvas-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .modal-content {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Timeline Custom Dark Rules */
+[data-theme="dark"] .timeline-item::after {
+  background-color: var(--bg-primary);
+}
+
+/* Text selections & links */
+[data-theme="dark"] a {
+  color: var(--accent-color);
+}
+
+/* Fix text-muted visibility in dark mode */
+[data-theme="dark"] .text-muted {
+  color: #94a3b8 !important;
+}
+
+/* Footer links text color to white in dark mode */
+[data-theme="dark"] .footer-link {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .footer-link:hover {
+  color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .footer-logo {
+  color: #ffffff;
+}
+
+/* System Engineering Schematic Details Panel */
+[data-theme="dark"] .schematic-details-box .bg-light {
+  background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .schematic-details-box code.text-dark {
+  color: var(--text-primary) !important;
+}
+
+/* Invert default Bootstrap black icons (hamburger menu, offcanvas close button) to white in dark mode */
+[data-theme="dark"] .navbar-toggler-icon,
+[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Custom background for Why Choose Us section */
+[data-theme="dark"] .solid-theme-bg {
+  background-color: #000000 !important;
+}
+
+/* Make text-black white in dark mode for visibility */
+[data-theme="dark"] .text-black {
+  color: #ffffff !important;
+}

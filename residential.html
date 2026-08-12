@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residential Purifiers & AMC | HydroPure</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore HydroPure's premium residential water filtration products, home RO & UV purifiers, and customer AMC plans.">
+  <meta name="keywords" content="Residential RO, Whole house water filter, Smart water purifier, Under-sink filter, Water softeners, IoT water telemetry">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M 5 10 C 7 8, 9 12, 12 10 C 15 8, 16 12, 18.5 10'/><path d='M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 18.5 14'/></svg>">
+
+  <!-- CDNs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/dark-mode.css" rel="stylesheet">
+  <link href="assets/css/rtl.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-waves">
+      <div class="loader-wave-element"></div>
+      <div class="loader-wave-element"></div>
+      <div class="loader-wave-element"></div>
+    </div>
+    <h2 class="fs-6 mt-3 tracking-widest text-uppercase text-muted">HydroPure</h2>
+  </div>
+
+  <!-- WebGL Background Canvas -->
+        <!-- Header Section -->
+  <header class="fixed-top">
+    <nav class="navbar premium-navbar navbar-expand-xl py-0" aria-label="Main Navigation">
+      <div class="container">
+        
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html" id="brand-logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: var(--accent-color); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M 5 10 C 7 8, 9 12, 12 10 C 15 8, 17 12, 19 10" />
+            <path d="M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 19 14" />
+          </svg>
+          HydroPure
+        </a>
+
+        <!-- Custom Controls (Desktop) -->
+        <div class="d-none d-xl-flex align-items-center gap-3 order-xl-3">
+          <button id="dir-toggle" class="toggle-btn" aria-label="Toggle language direction">RTL</button>
+          <button id="theme-toggle" class="toggle-btn" aria-label="Toggle dark mode"></button>
+          <a href="login.html" class="btn btn-premium btn-sm">Login</a>
+          <a href="dashboard.html" class="btn btn-premium btn-sm">Account</a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Offcanvas Mobile Navigation Menu -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-xl-center">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i data-lucide="chevron-down" class="nav-dropdown-icon"></i></a>
+                <ul class="dropdown-menu shadow-lg" aria-labelledby="homeDropdown">
+                  <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+                  <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services <i data-lucide="chevron-down" class="nav-dropdown-icon"></i></a>
+                <ul class="dropdown-menu shadow-lg" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item active" href="residential.html">Residential</a></li>
+                  <li><a class="dropdown-item" href="solutions.html">AMC</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Support</a>
+              </li>
+              
+              <!-- Mobile-only Controls -->
+              <li class="nav-item d-xl-none mt-4">
+                <div class="d-flex gap-3 align-items-center justify-content-center">
+                  <button onclick="document.getElementById('theme-toggle').click()" class="toggle-btn" aria-label="Toggle Theme mobile">🌓</button>
+                  <button onclick="document.getElementById('dir-toggle').click()" class="toggle-btn" aria-label="Toggle direction mobile">RTL/LTR</button>
+                </div>
+              </li>
+              <li class="nav-item d-xl-none mt-3">
+                <div class="d-flex flex-column gap-2">
+                  <a href="login.html" class="btn btn-premium w-100">Login</a>
+                  <a href="dashboard.html" class="btn btn-premium w-100">Account</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- Residential Content -->
+  <main class="py-5" style="margin-top: var(--header-height);">
+    
+    <!-- Hero Details -->
+    <section class="py-5 text-center">
+      <div class="container py-4">
+        <span class="text-uppercase tracking-widest text-muted fs-7">Residential Division</span>
+        <h1 class="section-title mt-2 mb-4">Residential Solutions</h1>
+        <p class="body-lead max-w-600 mx-auto">Premium domestic filtering systems offering commercial-grade safety in modular, sleek, countertop and whole-home appliances. Connects to telemetry systems for automated filter cartridge maintenance alerts.</p>
+      </div>
+    </section>
+
+    <!-- Core Systems & Components -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="text-uppercase tracking-widest text-muted fs-7">Pure Water Science for Home</span>
+          <h2 class="section-title mt-2">Product Profiles</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="h-100 feature-hover-card text-center" style="background: rgba(0,0,0,0.35); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1);">
+              <div class="p-3 bg-info-subtle text-info rounded d-inline-block mb-3">
+                <i data-lucide="home" class="w-6 h-6"></i>
+              </div>
+              <h3 class="h5 mb-2 fw-bold text-white">Whole-House Filters</h3>
+              <p class="text-light mb-0">Centralized sediment, chlorine, and hardness filters installed at water intake mainlines, protecting all domestic plumbing, fixtures, and appliances.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="h-100 feature-hover-card text-center" style="background: rgba(0,0,0,0.35); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1);">
+              <div class="p-3 bg-info-subtle text-info rounded d-inline-block mb-3">
+                <i data-lucide="shield-alert" class="w-6 h-6"></i>
+              </div>
+              <h3 class="h5 mb-2 fw-bold text-white">Under-Sink RO Units</h3>
+              <p class="text-light mb-0">High-efficiency, low-footprint reverse osmosis filters equipped with mineral replenishment post-cartridges for balanced and healthy drinking water.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="h-100 feature-hover-card text-center" style="background: rgba(0,0,0,0.35); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1);">
+              <div class="p-3 bg-info-subtle text-info rounded d-inline-block mb-3">
+                <i data-lucide="smartphone" class="w-6 h-6"></i>
+              </div>
+              <h3 class="h5 mb-2 fw-bold text-white">Smart UV Purifiers</h3>
+              <p class="text-light mb-0">Countertop and faucet-attached sterilizers using active UV-C LEDs and carbon block cores. Integrates with your smartphone to track cartridge lifespans.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specifications Tables -->
+    <section class="py-5">
+      <div class="container py-4">
+        <h2 class="h2 mb-4 text-center">Home System Specifications</h2>
+        <p class="text-secondary text-center mb-5 max-w-600 mx-auto">Compare specifications of our standard premium domestic filters and select the model suited for your household size.</p>
+        
+        <div class="table-responsive-custom shadow-sm bg-white">
+          <table class="table table-premium w-100" aria-label="Residential Filter Specifications">
+            <thead>
+              <tr>
+                <th scope="col">Product Model</th>
+                <th scope="col">Product Type</th>
+                <th scope="col">Stages</th>
+                <th scope="col">Flow Capacity</th>
+                <th scope="col">IoT Features</th>
+                <th scope="col">Filter Lifespan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">AQUA-HOME-MINI</th>
+                <td>Faucet UV-C Attachment</td>
+                <td>3 Stages</td>
+                <td>1.5 GPM</td>
+                <td>Filter Status LED</td>
+                <td>3 - 6 Months</td>
+              </tr>
+              <tr>
+                <th scope="row">AQUA-RO-SLIM</th>
+                <td>Under-Sink RO System</td>
+                <td>5 Stages</td>
+                <td>75 GPD</td>
+                <td>Leak Alarm Sensor</td>
+                <td>12 Months</td>
+              </tr>
+              <tr>
+                <th scope="row">AQUA-RO-SMART</th>
+                <td>Under-Sink Smart RO</td>
+                <td>6 Stages (Alkaline)</td>
+                <td>100 GPD</td>
+                <td>Wi-Fi App + TDS meter</td>
+                <td>12 - 18 Months</td>
+              </tr>
+              <tr>
+                <th scope="row">AQUA-HOUSE-PRO</th>
+                <td>Whole-House Filter</td>
+                <td>7 Stages + Softener</td>
+                <td>15.0 GPM</td>
+                <td>Central Hub Telemetry</td>
+                <td>24 Months (media)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flow Pathway Section -->
+    <section class="py-5">
+      <div class="container py-4 text-start">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div style="background: rgba(0,0,0,0.35); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1);">
+              <h2 class="h2 mb-4 text-white">Multi-Stage Separation Path</h2>
+              <p class="text-light mb-4">Our premium filters utilize a sequential mechanical and chemical separation path to remove contaminants while preserving essential trace minerals.</p>
+              
+              <ol class="d-flex flex-column gap-3 ps-3 text-light mb-0">
+                <li><strong>Sediment Interception:</strong> High-density poly-spun fibers filter out rust, sand, dirt, and suspended particles.</li>
+                <li><strong>Carbon Block Adsorption:</strong> Activated coconut shell carbon adsorbs chlorine, trihalomethanes (THMs), and VOCs.</li>
+                <li><strong>Molecular RO Filtration:</strong> Pre-washed polyamide membranes remove heavy metals (Lead, Arsenic, Chromium) and micro-solutes.</li>
+                <li><strong>UV-C Sterilization:</strong> Instant UV-C light eliminates 99.99% of bacteria and viruses in real-time.</li>
+                <li><strong>Mineral Remineralization:</strong> Calcite and corosex media add calcium and magnesium trace ions for a fresh, crisp taste.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-2 border border-info-subtle bg-light-gradient rounded-4 overflow-hidden shadow">
+              <img src="assets/images/residential-detail.png" alt="Sleek home under-sink reverse osmosis system" class="img-fluid rounded-3 w-100">
+            </div>
+            <p class="text-center text-secondary fs-8 mt-2">Figure 3: Compact and sleek under-sink active reverse osmosis system designed for residential drinking water purification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart IoT Integration Section -->
+    <section class="py-5 bg-light-gradient">
+      <div class="container py-4 text-start">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <span class="text-uppercase tracking-widest text-muted fs-7">Smart Monitoring</span>
+            <h2 class="section-title mt-2">Smart IoT Integration App</h2>
+            <p class="text-secondary mt-3">Keep track of your household water safety parameters directly from our AQUA-LINK mobile application.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="border bg-white p-4 h-100 shadow-sm rounded-4">
+              <div class="text-info mb-3"><i data-lucide="life-buoy" class="w-8 h-8"></i></div>
+              <h3 class="h6 mb-2 fw-bold">Filter Lifespan</h3>
+              <p class="text-secondary mb-0 fs-7">Percent trackers alert you when filter replacement is needed.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="border bg-white p-4 h-100 shadow-sm rounded-4">
+              <div class="text-info mb-3"><i data-lucide="line-chart" class="w-8 h-8"></i></div>
+              <h3 class="h6 mb-2 fw-bold">Purified TDS Log</h3>
+              <p class="text-secondary mb-0 fs-7">Read inlet and outlet TDS values updated daily.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="border bg-white p-4 h-100 shadow-sm rounded-4">
+              <div class="text-info mb-3"><i data-lucide="bell-ring" class="w-8 h-8"></i></div>
+              <h3 class="h6 mb-2 fw-bold">Leak Alarm</h3>
+              <p class="text-secondary mb-0 fs-7">Instantly shut down intake valves if a leak is detected inside the cabinet.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="border bg-white p-4 h-100 shadow-sm rounded-4">
+              <div class="text-info mb-3"><i data-lucide="shopping-cart" class="w-8 h-8"></i></div>
+              <h3 class="h6 mb-2 fw-bold">Automated Reorder</h3>
+              <p class="text-secondary mb-0 fs-7">Automatically place order drafts for replacement filter cartridges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation Form -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="border bg-white solid-theme-bg p-5 shadow-sm">
+              <h2 class="h3 mb-2 text-center">Schedule Home Water Assessment</h2>
+              <p class="text-secondary text-center mb-5">Our technical specialists can analyze your tap water and design a customized whole-home filtration framework.</p>
+              
+              <form class="premium-form text-start" novalidate>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="res-name">Your Name&nbsp;*</label>
+                    <input type="text" id="res-name" class="form-control" required placeholder="John Doe">
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="res-email">Email Address&nbsp;*</label>
+                    <input type="email" id="res-email" class="form-control" required placeholder="john@email.com">
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="res-phone">Phone Number&nbsp;*</label>
+                    <input type="tel" id="res-phone" class="form-control" required placeholder="(123) 456-7890">
+                    <div class="invalid-feedback">Phone number is required.</div>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="res-zip">Zip/Postal Code&nbsp;*</label>
+                    <input type="text" id="res-zip" class="form-control" required placeholder="12345">
+                    <div class="invalid-feedback">Postal code is required.</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="res-system">Target System Interest&nbsp;*</label>
+                  <select id="res-system" class="form-select" required>
+                    <option value="" disabled selected>Select system interest...</option>
+                    <option value="whole">Whole-House Softener & Filter</option>
+                    <option value="undersink">Under-Sink Reverse Osmosis</option>
+                    <option value="smartuv">Smart UV Countertop Purifier</option>
+                    <option value="not-sure">Unsure (Need water assessment first)</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a system of interest.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="res-message">Provide details about tap water taste, color, or specific concerns (e.g. hard water scale, chlorine smell)</label>
+                  <textarea id="res-message" rows="4" class="form-control" placeholder="Specify if there is white lime buildup on faucets, metallic taste, chlorine odor, etc..."></textarea>
+                </div>
+
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-premium w-100 py-3 btn-solution-form">Request Home Assessment</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="premium-footer">
+    <div class="container">
+      <div class="row g-5">
+        
+        <div class="col-lg-4">
+          <a class="footer-logo mb-3" href="index.html">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: var(--accent-color); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M 5 10 C 7 8, 9 12, 12 10 C 15 8, 17 12, 19 10" />
+            <path d="M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 19 14" />
+          </svg>
+            HydroPure
+          </a>
+          <p class="text-secondary mt-3">Providing premium RO & UV water purifiers, annual maintenance contracts (AMC), and customized commercial filtration services.</p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase tracking-wider mb-4">Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="solutions.html" class="footer-link">AMC Plans</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="login.html" class="footer-link">Customer Portal</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 col-lg-2">
+          <h3 class="h6 text-uppercase tracking-wider mb-4">Resources</h3>
+          <ul class="list-unstyled">
+            <li><a href="coming-soon.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="coming-soon.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="coming-soon.html" class="footer-link">User Manuals</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h3 class="h6 text-uppercase tracking-wider mb-4">Newsletter</h3>
+          <p class="text-secondary mb-3">Subscribe to our newsletter for health tips and filter care advice.</p>
+          <form class="newsletter-form d-flex gap-2">
+            <input type="email" class="form-control" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit" class="btn btn-premium text-white border-white">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="row pt-5 mt-5 border-top align-items-center justify-content-between">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="text-secondary mb-0">&copy; 2026 HydroPure. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" class="scroll-top" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- JS CDNs -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
