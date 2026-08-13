@@ -485,7 +485,7 @@
           <div class="col-lg-7">
             <div class="schematic-wrapper text-center">
               <!-- Interactive 2-Column, 2-Row Flow Diagram SVG -->
-              <svg class="schematic-svg" viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg">
+              <svg class="schematic-svg d-none d-lg-block" viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="grad-sediment" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stop-color="#0d9488" stop-opacity="0.85" />
@@ -587,6 +587,75 @@
                   <text x="370" y="230" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle"
                     font-family="var(--font-main)" style="pointer-events:none;">UV + ALKALINE</text>
                   <circle cx="370" cy="218" r="6" fill="#fff" filter="url(#glow)" />
+                </g>
+              </svg>
+
+              <!-- Mobile Interactive 1-Column Flow Diagram SVG -->
+              <svg class="schematic-svg d-block d-lg-none mx-auto" viewBox="0 0 200 550" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 250px; margin: 0 auto;">
+                <defs>
+                  <linearGradient id="grad-sediment-mob" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#0d9488" stop-opacity="0.85" />
+                    <stop offset="50%" stop-color="#14b8a6" stop-opacity="0.65" />
+                    <stop offset="100%" stop-color="#0d9488" stop-opacity="0.85" />
+                  </linearGradient>
+                  <linearGradient id="grad-carbon-mob" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.85" />
+                    <stop offset="50%" stop-color="#6366f1" stop-opacity="0.65" />
+                    <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.85" />
+                  </linearGradient>
+                  <linearGradient id="grad-ro-mob" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#0284c7" stop-opacity="0.85" />
+                    <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.65" />
+                    <stop offset="100%" stop-color="#0284c7" stop-opacity="0.85" />
+                  </linearGradient>
+                  <linearGradient id="grad-uv-mob" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.85" />
+                    <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.65" />
+                    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.85" />
+                  </linearGradient>
+                  <filter id="glow-mob" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
+
+                <!-- Flow connecting pipes between cylinders -->
+                <line x1="100" y1="10" x2="100" y2="40" stroke="var(--accent-color)" stroke-width="4" class="schematic-flow-line" />
+                <line x1="100" y1="114" x2="100" y2="166" stroke="var(--accent-color)" stroke-width="4" class="schematic-flow-line" />
+                <line x1="100" y1="240" x2="100" y2="292" stroke="var(--accent-color)" stroke-width="4" class="schematic-flow-line" />
+                <line x1="100" y1="366" x2="100" y2="418" stroke="var(--accent-color)" stroke-width="4" class="schematic-flow-line" />
+                <line x1="100" y1="492" x2="100" y2="520" stroke="var(--accent-color)" stroke-width="4" class="schematic-flow-line" />
+
+                <!-- Layer 1: Sediment Prefilter -->
+                <g class="schematic-interactive-node" data-title="1. Multi-Stage Sediment Prefilter" data-desc="Spun-polypropylene fibers with density gradient structure. Captures rust, mud, sand, hair, and visible particulate contaminants from raw input water, shielding subsequent filters." data-spec="Mesh rating: 5 microns | Structure: Gradient polypropylene | Pressure limit: 6.0 Bar">
+                  <path d="M 45,60 A 55,14 0 0,0 155,60 L 155,100 A 55,14 0 0,1 45,100 Z" fill="url(#grad-sediment-mob)" stroke="var(--border-color)" stroke-width="1.5" />
+                  <ellipse cx="100" cy="60" rx="55" ry="14" fill="#14b8a6" stroke="var(--border-color)" stroke-width="1.5" opacity="0.9" />
+                  <text x="100" y="85" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle" font-family="var(--font-main)" style="pointer-events:none;">SEDIMENT FILTER</text>
+                  <circle cx="100" cy="74" r="5" fill="#fff" filter="url(#glow-mob)" />
+                </g>
+
+                <!-- Layer 2: Carbon -->
+                <g class="schematic-interactive-node" data-title="2. Extruded Carbon Block Filter" data-desc="Highly porous carbon adsorption matrices. Effectively binds dissolved organic compounds, volatile organic chemicals (VOCs), agricultural pesticides, chlorine, taste anomalies, and odor components." data-spec="Iodine value: 1050 mg/g | Pore rating: 10 microns | Lifespan: 6,000 liters">
+                  <path d="M 45,180 A 55,14 0 0,0 155,180 L 155,226 A 55,14 0 0,1 45,226 Z" fill="url(#grad-carbon-mob)" stroke="var(--border-color)" stroke-width="1.5" />
+                  <ellipse cx="100" cy="180" rx="55" ry="14" fill="#6366f1" stroke="var(--border-color)" stroke-width="1.5" opacity="0.9" />
+                  <text x="100" y="205" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle" font-family="var(--font-main)" style="pointer-events:none;">CARBON BLOCK</text>
+                  <circle cx="100" cy="194" r="5" fill="#fff" filter="url(#glow-mob)" />
+                </g>
+
+                <!-- Layer 3: RO -->
+                <g class="schematic-interactive-node active" data-title="3. High-Density RO Membrane" data-desc="Thin-film composite (TFC) aromatic polyamide membrane. Operates under high hydraulic pressure to separate heavy metals, fluorides, chemical salts, and micro-plastics from the pure water stream." data-spec="Salt rejection: 99.8% | Filter capacity: 75-400 GPD | Pore size: 0.0001 microns">
+                  <path d="M 45,306 A 55,14 0 0,0 155,306 L 155,352 A 55,14 0 0,1 45,352 Z" fill="url(#grad-ro-mob)" stroke="var(--border-color)" stroke-width="1.5" />
+                  <ellipse cx="100" cy="306" rx="55" ry="14" fill="#38bdf8" stroke="var(--border-color)" stroke-width="1.5" opacity="0.9" />
+                  <text x="100" y="331" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle" font-family="var(--font-main)" style="pointer-events:none;">RO MEMBRANE</text>
+                  <circle cx="100" cy="320" r="5" fill="#fff" filter="url(#glow-mob)" />
+                </g>
+
+                <!-- Layer 4: UV -->
+                <g class="schematic-interactive-node" data-title="4. UV Sterilization & Alkaline Post-Filter" data-desc="High-intensity UV-C chamber that destroys biological pathogens' DNA, combined with an active alkaline cartridge that infuses essential calcium and magnesium minerals, balancing pH perfectly." data-spec="UV wavelength: 254nm | Target pH: 8.5+ | Replacement: 12 months">
+                  <path d="M 45,432 A 55,14 0 0,0 155,432 L 155,478 A 55,14 0 0,1 45,478 Z" fill="url(#grad-uv-mob)" stroke="var(--border-color)" stroke-width="1.5" />
+                  <ellipse cx="100" cy="432" rx="55" ry="14" fill="#a78bfa" stroke="var(--border-color)" stroke-width="1.5" opacity="0.9" />
+                  <text x="100" y="457" fill="#ffffff" font-size="10" font-weight="bold" text-anchor="middle" font-family="var(--font-main)" style="pointer-events:none;">UV + ALKALINE</text>
+                  <circle cx="100" cy="446" r="5" fill="#fff" filter="url(#glow-mob)" />
                 </g>
               </svg>
             </div>

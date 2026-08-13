@@ -187,3 +187,25 @@
 [data-theme="dark"] .text-black {
   color: #ffffff !important;
 }
+
+/* Ensure text-dark elements (like prices) are high contrast in dark mode */
+[data-theme="dark"] .text-dark:not(.btn) {
+  color: var(--text-primary) !important;
+}
+
+/* High contrast glassmorphic styling for badges in dark mode */
+[data-theme="dark"] .badge.bg-info-subtle {
+  background-color: rgba(52, 211, 153, 0.15) !important;
+  color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .badge.bg-light {
+  background-color: rgba(248, 250, 252, 0.15) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .badge.bg-secondary-subtle {
+  background-color: rgba(226, 232, 240, 0.15) !important;
+  color: var(--text-secondary) !important;
+}
+
