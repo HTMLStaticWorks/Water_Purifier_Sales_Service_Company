@@ -114,11 +114,11 @@
   <main class="py-5" style="margin-top: var(--header-height);">
     
     <!-- Hero Details -->
-    <section class="py-5 text-center">
+    <section class="hero-page-header text-center" style="background-image: url('assets/images/hero-industrial-bg.jpg');">
       <div class="container py-4">
-        <span class="text-uppercase tracking-widest text-muted fs-7">Industrial Division</span>
-        <h1 class="section-title mt-2 mb-4">Industrial Water Treatment</h1>
-        <p class="body-lead max-w-600 mx-auto">High-throughput purification systems designed to achieve rigorous processing specifications and secure regulatory permits. Perfect for heavy manufacturing, mining, energy sectors, and food production plants.</p>
+        <span class="text-uppercase tracking-widest text-white-50 fs-7">Industrial Division</span>
+        <h1 class="section-title text-white mt-2 mb-4">Industrial Solutions</h1>
+        <p class="body-lead text-light max-w-600 mx-auto">Heavy-duty commercial reverse osmosis plants, pressure filtration units, and integrated softening skids built for high-throughput operational requirements and regulatory compliance.</p>
       </div>
     </section>
 
@@ -247,7 +247,7 @@
           </div>
           <div class="col-lg-6">
             <div class="p-2 border border-info-subtle bg-light-gradient rounded-4 overflow-hidden shadow">
-              <img src="assets/images/industrial-detail.png" alt="Industrial reverse osmosis water treatment system skid" class="img-fluid rounded-3 w-100">
+              <img src="assets/images/industrial-detail-new.jpg" alt="Industrial reverse osmosis water treatment system skid" class="img-fluid rounded-3 w-100">
             </div>
             <p class="text-center text-secondary fs-8 mt-2">Figure 1: Fully integrated AQUATECH Industrial Reverse Osmosis (RO) skid with automated valves and high-pressure piping.</p>
           </div>
@@ -294,59 +294,70 @@
     <section class="py-5">
       <div class="container py-4">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="border bg-white solid-theme-bg p-5 shadow-sm">
-              <h2 class="h3 mb-2 text-center">Request Industrial Design Spec & RFQ</h2>
-              <p class="text-secondary text-center mb-5">Provide raw water parameters and target flow capacity. Our engineering team will draft a layout proposal.</p>
-              
-              <form class="premium-form text-start" novalidate>
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <label for="rfq-name">Your Name&nbsp;*</label>
-                    <input type="text" id="rfq-name" class="form-control" required placeholder="John Doe">
-                    <div class="invalid-feedback">Please enter your name.</div>
+          <div class="col-lg-12">
+            <div class="border bg-white solid-theme-bg p-4 p-md-5 shadow-sm rounded-4">
+              <div class="row align-items-center g-5">
+                <div class="col-lg-5 d-none d-lg-block">
+                  <div class="p-2 border border-info-subtle bg-light-gradient rounded-4 overflow-hidden shadow mb-3">
+                    <img src="assets/images/industrial-solution.png" alt="Industrial Purification Solution" class="img-fluid rounded-3 w-100">
                   </div>
-                  <div class="col-md-6 form-group">
-                    <label for="rfq-email">Email Address&nbsp;*</label>
-                    <input type="email" id="rfq-email" class="form-control" required placeholder="john@company.com">
-                    <div class="invalid-feedback">Please enter a valid email.</div>
-                  </div>
+                  <h4 class="h5 text-primary mb-2 text-center text-lg-start">Industrial Specs & Design RFQ</h4>
+                  <p class="text-secondary small text-center text-lg-start mb-0">Submit water specifications to our design engineers for a custom plant layout and quotation tailored to your facility parameters.</p>
                 </div>
+                <div class="col-lg-7">
+                  <h2 class="h3 mb-2">Request Industrial Design Spec & RFQ</h2>
+                  <p class="text-secondary mb-4">Provide raw water parameters and target flow capacity. Our engineering team will draft a layout proposal.</p>
+                  
+                  <form class="premium-form text-start" novalidate>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="rfq-name">Your Name&nbsp;*</label>
+                        <input type="text" id="rfq-name" class="form-control" required placeholder="John Doe">
+                        <div class="invalid-feedback">Please enter your name.</div>
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="rfq-email">Email Address&nbsp;*</label>
+                        <input type="email" id="rfq-email" class="form-control" required placeholder="john@company.com">
+                        <div class="invalid-feedback">Please enter a valid email.</div>
+                      </div>
+                    </div>
 
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <label for="rfq-company">Company Name</label>
-                    <input type="text" id="rfq-company" class="form-control" placeholder="Acme Corp">
-                  </div>
-                  <div class="col-md-6 form-group">
-                    <label for="rfq-flow">Target Capacity (GPD)&nbsp;*</label>
-                    <input type="text" id="rfq-flow" class="form-control" required placeholder="e.g. 100,000">
-                    <div class="invalid-feedback">Target capacity is required.</div>
-                  </div>
-                </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="rfq-company">Company Name</label>
+                        <input type="text" id="rfq-company" class="form-control" placeholder="Acme Corp">
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="rfq-flow">Target Capacity (GPD)&nbsp;*</label>
+                        <input type="text" id="rfq-flow" class="form-control" required placeholder="e.g. 100,000">
+                        <div class="invalid-feedback">Target capacity is required.</div>
+                      </div>
+                    </div>
 
-                <div class="form-group">
-                  <label for="rfq-source">Raw Feed Water Source&nbsp;*</label>
-                  <select id="rfq-source" class="form-select" required>
-                    <option value="" disabled selected>Select water source...</option>
-                    <option value="well">Well Water / Groundwater</option>
-                    <option value="surface">Surface Water (River/Lake)</option>
-                    <option value="municipal">Municipal Tap</option>
-                    <option value="seawater">Seawater</option>
-                    <option value="wastewater">Industrial Wastewater</option>
-                  </select>
-                  <div class="invalid-feedback">Please select a raw water source.</div>
-                </div>
+                    <div class="form-group">
+                      <label for="rfq-source">Raw Feed Water Source&nbsp;*</label>
+                      <select id="rfq-source" class="form-select" required>
+                        <option value="" disabled selected>Select water source...</option>
+                        <option value="well">Well Water / Groundwater</option>
+                        <option value="surface">Surface Water (River/Lake)</option>
+                        <option value="municipal">Municipal Tap</option>
+                        <option value="seawater">Seawater</option>
+                        <option value="wastewater">Industrial Wastewater</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a raw water source.</div>
+                    </div>
 
-                <div class="form-group">
-                  <label for="rfq-message">Known Contaminants / TDS Levels / Project Description</label>
-                  <textarea id="rfq-message" rows="4" class="form-control" placeholder="Specify if there is high iron, heavy organic loads, specific pH targets, or TDS values..."></textarea>
-                </div>
+                    <div class="form-group">
+                      <label for="rfq-message">Known Contaminants / TDS Levels / Project Description</label>
+                      <textarea id="rfq-message" rows="4" class="form-control" placeholder="Specify if there is high iron, heavy organic loads, specific pH targets, or TDS values..."></textarea>
+                    </div>
 
-                <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-premium w-100 py-3 btn-solution-form">Submit Specifications Request</button>
+                    <div class="text-center mt-4">
+                      <button type="submit" class="btn btn-premium w-100 py-3 btn-solution-form">Submit Specifications Request</button>
+                    </div>
+                  </form>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

@@ -132,12 +132,12 @@ function initNavigation() {
 
   // Set active class on parent dropdowns
   const homeDropdown = document.getElementById('homeDropdown');
-  const solutionsDropdown = document.getElementById('solutionsDropdown');
+  const servicesDropdown = document.getElementById('servicesDropdown');
 
   if (currentPath.endsWith('/') || currentPath.includes('index.html') || currentPath.includes('home2.html') || isHomeActive) {
     if (homeDropdown) homeDropdown.classList.add('active');
   } else if (isSolutionsActive) {
-    if (solutionsDropdown) solutionsDropdown.classList.add('active');
+    if (servicesDropdown) servicesDropdown.classList.add('active');
   } else if (!matchedOther) {
     // Default fallback to Home
     if (homeDropdown) homeDropdown.classList.add('active');

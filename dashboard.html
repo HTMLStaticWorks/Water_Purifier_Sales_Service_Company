@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customer Dashboard | HydroPure Water Purifier Sales & Service</title>
-  
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Manage your HydroPure AMC status, schedule filter replacement visits, and view service history logs.">
-  
+  <meta name="description"
+    content="Manage your HydroPure AMC status, schedule filter replacement visits, and view service history logs.">
+
   <!-- Favicon Mock -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M 5 10 C 7 8, 9 12, 12 10 C 15 8, 16 12, 18.5 10'/><path d='M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 18.5 14'/></svg>">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230284c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M 5 10 C 7 8, 9 12, 12 10 C 15 8, 16 12, 18.5 10'/><path d='M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 18.5 14'/></svg>">
 
   <!-- CDNs: Bootstrap 5, Lucide Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Custom Stylesheets -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/dark-mode.css" rel="stylesheet">
   <link href="assets/css/rtl.css" rel="stylesheet">
 </head>
+
 <body class="home-white-text">
 
   <!-- Custom Page Loading Spinner -->
@@ -31,14 +35,15 @@
     <h2 class="fs-6 mt-3 tracking-widest text-uppercase text-muted">HydroPure</h2>
   </div>
 
-        <!-- Header Section -->
+  <!-- Header Section -->
   <header class="fixed-top">
     <nav class="navbar premium-navbar navbar-expand-xl py-0" aria-label="Main Navigation">
       <div class="container">
-        
+
         <!-- Logo -->
         <a class="navbar-brand" href="index.html" id="brand-logo">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: none; stroke: var(--accent-color); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+            style="fill: none; stroke: var(--accent-color); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; width: 32px; height: 32px; vertical-align: middle; margin-right: 8px;">
             <circle cx="12" cy="12" r="10" />
             <path d="M 5 10 C 7 8, 9 12, 12 10 C 15 8, 17 12, 19 10" />
             <path d="M 5 14 C 7 12, 9 16, 12 14 C 15 12, 17 16, 19 14" />
@@ -50,12 +55,13 @@
         <div class="d-none d-xl-flex align-items-center gap-3 order-xl-3">
           <button id="dir-toggle" class="toggle-btn" aria-label="Toggle language direction">RTL</button>
           <button id="theme-toggle" class="toggle-btn" aria-label="Toggle dark mode"></button>
-          <a href="login.html" class="btn btn-premium btn-sm">Login</a>
-          <a href="dashboard.html" class="btn btn-premium btn-sm active">Account</a>
+          <!-- <a href="login.html" class="btn btn-premium btn-sm">Login</a> -->
+          <a href="index.html" class="btn btn-premium btn-sm active">Logout</a>
         </div>
 
         <!-- Hamburger Icon -->
-        <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -67,8 +73,9 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav mx-auto mb-2 mb-xl-0 align-items-xl-center">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i data-lucide="chevron-down" class="nav-dropdown-icon"></i></a>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">Home <i data-lucide="chevron-down" class="nav-dropdown-icon"></i></a>
                 <ul class="dropdown-menu shadow-lg" aria-labelledby="homeDropdown">
                   <li><a class="dropdown-item" href="index.html">Home 1</a></li>
                   <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
@@ -78,7 +85,9 @@
                 <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services <i data-lucide="chevron-down" class="nav-dropdown-icon"></i></a>
+                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">Services <i data-lucide="chevron-down"
+                    class="nav-dropdown-icon"></i></a>
                 <ul class="dropdown-menu shadow-lg" aria-labelledby="servicesDropdown">
                   <li><a class="dropdown-item" href="residential.html">Residential</a></li>
                   <li><a class="dropdown-item" href="solutions.html">AMC</a></li>
@@ -86,19 +95,21 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Support</a>
-              </li>
-              
+              </li> -->
+
               <!-- Mobile-only Controls -->
               <li class="nav-item d-xl-none mt-4">
                 <div class="d-flex gap-3 align-items-center justify-content-center">
-                  <button onclick="document.getElementById('theme-toggle').click()" class="toggle-btn" aria-label="Toggle Theme mobile">🌓</button>
-                  <button onclick="document.getElementById('dir-toggle').click()" class="toggle-btn" aria-label="Toggle direction mobile">RTL/LTR</button>
+                  <button onclick="document.getElementById('theme-toggle').click()" class="toggle-btn"
+                    aria-label="Toggle Theme mobile">🌓</button>
+                  <button onclick="document.getElementById('dir-toggle').click()" class="toggle-btn"
+                    aria-label="Toggle direction mobile">RTL/LTR</button>
                 </div>
               </li>
               <li class="nav-item d-xl-none mt-3">
                 <div class="d-flex flex-column gap-2">
-                  <a href="login.html" class="btn btn-premium w-100">Login</a>
-                  <a href="dashboard.html" class="btn btn-premium w-100">Account</a>
+                  <!-- <a href="login.html" class="btn btn-premium w-100">Login</a> -->
+                  <a href="index.html" class="btn btn-premium w-100">Logout</a>
                 </div>
               </li>
             </ul>
@@ -111,20 +122,23 @@
 
   <!-- Dashboard Section -->
   <main class="py-5" style="margin-top: var(--header-height);">
-    
+
     <!-- Dashboard Hero / Welcome -->
-    <section class="py-4 text-start">
+    <section class="hero-page-header text-start" style="background-image: url('assets/images/hero-dashboard-bg.jpg');">
       <div class="container">
         <div class="row align-items-center justify-content-between">
           <div class="col-md-8">
-            <span class="text-uppercase tracking-widest text-muted fs-7">Welcome back, John Doe</span>
-            <h1 class="section-title mt-1 mb-2">Customer Dashboard</h1>
-            <p class="body-lead fs-6 text-muted">Manage your water purifier's AMC plan, schedule filter maintenance, and view logs.</p>
+            <span class="text-uppercase tracking-widest text-white-50 fs-7">Welcome back, John Doe</span>
+            <h1 class="section-title text-white mt-1 mb-2">Customer Dashboard</h1>
+            <p class="body-lead fs-6 text-light">Manage your water purifier's AMC plan, schedule filter maintenance, and
+              view logs.</p>
           </div>
           <div class="col-md-4 text-md-end">
-            <div class="border p-3 d-inline-block bg-white shadow-sm">
-              <div class="small text-secondary">Customer ID: <strong class="text-primary">HP-98302-A</strong></div>
-              <div class="small text-secondary">Purifier Unit: <strong class="text-primary">HydroPure RO+UV Smart-7</strong></div>
+            <div class="border p-3 d-inline-block bg-dark shadow-sm"
+              style="--bs-bg-opacity: 0.5; border-color: rgba(255,255,255,0.2) !important;">
+              <div class="small text-light">Customer ID: <strong class="text-info">HP-98302-A</strong></div>
+              <div class="small text-light">Purifier Unit: <strong class="text-info">HydroPure RO+UV Smart-7</strong>
+              </div>
             </div>
           </div>
         </div>
@@ -135,14 +149,15 @@
     <section class="py-4 bg-light-gradient">
       <div class="container">
         <div class="row g-4">
-          
+
           <!-- AMC Plan Status Card -->
           <div class="col-lg-6">
             <div class="border bg-white p-4 shadow-sm h-100 text-start d-flex flex-column justify-content-between">
               <div>
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h2 class="h5 fw-bold text-primary mb-0">Active AMC Plan Status</h2>
-                  <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 fs-8">ACTIVE</span>
+                  <span
+                    class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 fs-8">ACTIVE</span>
                 </div>
                 <hr>
                 <div class="row g-3 py-2">
@@ -176,7 +191,7 @@
             <div class="border bg-white p-4 shadow-sm h-100 text-start">
               <h2 class="h5 fw-bold text-primary mb-3">Schedule Filter Replacement / Service Visit</h2>
               <hr>
-              
+
               <div id="booking-alert" class="alert alert-success d-none mb-3" role="alert">
                 Service visit scheduled successfully! A service engineer will contact you shortly.
               </div>
@@ -197,8 +212,10 @@
                     </select>
                   </div>
                   <div class="col-12">
-                    <label for="visit-comments" class="form-label small text-secondary">Service Details / Remarks</label>
-                    <textarea id="visit-comments" rows="2" class="form-control" placeholder="E.g., Purifier indicator flashing red, TDS adjustment needed, routine filter replacement request..."></textarea>
+                    <label for="visit-comments" class="form-label small text-secondary">Service Details /
+                      Remarks</label>
+                    <textarea id="visit-comments" rows="2" class="form-control"
+                      placeholder="E.g., Purifier indicator flashing red, TDS adjustment needed, routine filter replacement request..."></textarea>
                   </div>
                 </div>
                 <div class="mt-4 text-end">
@@ -232,7 +249,9 @@
                       <td>Routine AMC Visit</td>
                       <td>Robert C.</td>
                       <td>RO & Carbon Filters replaced, TDS levels calibrated to 90 ppm. Cleaned system interior.</td>
-                      <td><span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 fs-8">COMPLETED</span></td>
+                      <td><span
+                          class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 fs-8">COMPLETED</span>
+                      </td>
                     </tr>
                     <tr>
                       <td><strong>#SRV-0988</strong></td>
@@ -240,7 +259,9 @@
                       <td>Urgent Repair</td>
                       <td>David M.</td>
                       <td>Booster pump replacement (covered under warranty/AMC). Calibrated system flow rate.</td>
-                      <td><span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 fs-8">COMPLETED</span></td>
+                      <td><span
+                          class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 fs-8">COMPLETED</span>
+                      </td>
                     </tr>
                     <tr>
                       <td><strong>#SRV-0854</strong></td>
@@ -248,7 +269,9 @@
                       <td>First Free AMC Installation</td>
                       <td>Robert C.</td>
                       <td>Sediment & pre-carbon filters replaced. Pressure valve check completed.</td>
-                      <td><span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 fs-8">COMPLETED</span></td>
+                      <td><span
+                          class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 fs-8">COMPLETED</span>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -277,17 +300,17 @@
   <script>
     function bookServiceVisit(e) {
       e.preventDefault();
-      
+
       // Show success alert
       const alertDiv = document.getElementById('booking-alert');
       alertDiv.classList.remove('d-none');
-      
+
       // Reset form
       document.getElementById('visit-booking-form').reset();
-      
+
       // Scroll to alert
       alertDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      
+
       // Fade out alert after 5 seconds
       setTimeout(() => {
         alertDiv.classList.add('d-none');
@@ -295,4 +318,5 @@
     }
   </script>
 </body>
+
 </html>

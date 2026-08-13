@@ -114,11 +114,11 @@
   <main class="py-5" style="margin-top: var(--header-height);">
     
     <!-- Hero Details -->
-    <section class="py-5 text-center">
+    <section class="hero-page-header text-center" style="background-image: url('assets/images/hero-municipal-bg.jpg');">
       <div class="container py-4">
-        <span class="text-uppercase tracking-widest text-muted fs-7">Municipal Division</span>
-        <h1 class="section-title mt-2 mb-4">Municipal Solutions</h1>
-        <p class="body-lead max-w-600 mx-auto">Large-scale public systems configured to filter massive volumes of water. Engineered with heavy durability standards to ensure consistent supply and eliminate community contamination risks.</p>
+        <span class="text-uppercase tracking-widest text-white-50 fs-7">Municipal Division</span>
+        <h1 class="section-title text-white mt-2 mb-4">Municipal Solutions</h1>
+        <p class="body-lead text-light max-w-600 mx-auto">Large-scale public systems configured to filter massive volumes of water. Engineered with heavy durability standards to ensure consistent supply and eliminate community contamination risks.</p>
       </div>
     </section>
 
@@ -260,7 +260,7 @@
           </div>
           <div class="col-lg-6">
             <div class="p-2 border border-info-subtle bg-light-gradient rounded-4 overflow-hidden shadow">
-              <img src="assets/images/municipal-detail.png" alt="Large scale municipal drinking water clarifier filtration plant" class="img-fluid rounded-3 w-100">
+              <img src="assets/images/municipal-detail-new.jpg" alt="Large scale municipal drinking water clarifier filtration plant" class="img-fluid rounded-3 w-100">
             </div>
             <p class="text-center text-secondary fs-8 mt-2">Figure 2: Multi-barrier municipal filtration station featuring sedimentation clarifiers and polymeric capillary membranes.</p>
           </div>
@@ -315,59 +315,70 @@
     <section class="py-5">
       <div class="container py-4">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="border bg-white solid-theme-bg p-5 shadow-sm">
-              <h2 class="h3 mb-2 text-center">Municipal Engineering Consulting</h2>
-              <p class="text-secondary text-center mb-5">Connect with our infrastructure specialists. Submit project parameters or request general grid details.</p>
-              
-              <form class="premium-form text-start" novalidate>
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <label for="mun-name">Contact Representative Name&nbsp;*</label>
-                    <input type="text" id="mun-name" class="form-control" required placeholder="Representative Name">
-                    <div class="invalid-feedback">Representative name is required.</div>
+          <div class="col-lg-12">
+            <div class="border bg-white solid-theme-bg p-4 p-md-5 shadow-sm rounded-4">
+              <div class="row align-items-center g-5">
+                <div class="col-lg-5 d-none d-lg-block">
+                  <div class="p-2 border border-info-subtle bg-light-gradient rounded-4 overflow-hidden shadow mb-3">
+                    <img src="assets/images/municipal-solution.png" alt="Municipal Purification Solution" class="img-fluid rounded-3 w-100">
                   </div>
-                  <div class="col-md-6 form-group">
-                    <label for="mun-email">Official Email Address&nbsp;*</label>
-                    <input type="email" id="mun-email" class="form-control" required placeholder="name@agency.gov">
-                    <div class="invalid-feedback">Please enter a valid official email.</div>
-                  </div>
+                  <h4 class="h5 text-primary mb-2 text-center text-lg-start">Municipal Engineering Consulting</h4>
+                  <p class="text-secondary small text-center text-lg-start mb-0">Consult with our infrastructure specialists. Submit project parameters or request tender details for community water grids.</p>
                 </div>
+                <div class="col-lg-7">
+                  <h2 class="h3 mb-2">Municipal Engineering Consulting</h2>
+                  <p class="text-secondary mb-4">Connect with our infrastructure specialists. Submit project parameters or request general grid details.</p>
+                  
+                  <form class="premium-form text-start" novalidate>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="mun-name">Contact Representative Name&nbsp;*</label>
+                        <input type="text" id="mun-name" class="form-control" required placeholder="Representative Name">
+                        <div class="invalid-feedback">Representative name is required.</div>
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="mun-email">Official Email Address&nbsp;*</label>
+                        <input type="email" id="mun-email" class="form-control" required placeholder="name@agency.gov">
+                        <div class="invalid-feedback">Please enter a valid official email.</div>
+                      </div>
+                    </div>
 
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <label for="mun-agency">Government Agency / Municipal Authority&nbsp;*</label>
-                    <input type="text" id="mun-agency" class="form-control" required placeholder="District Water Board">
-                    <div class="invalid-feedback">Agency name is required.</div>
-                  </div>
-                  <div class="col-md-6 form-group">
-                    <label for="mun-capacity">Estimated Flow Demand (MGD)&nbsp;*</label>
-                    <input type="text" id="mun-capacity" class="form-control" required placeholder="e.g. 5.5 MGD">
-                    <div class="invalid-feedback">Capacity demand is required.</div>
-                  </div>
-                </div>
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <label for="mun-agency">Government Agency / Municipal Authority&nbsp;*</label>
+                        <input type="text" id="mun-agency" class="form-control" required placeholder="District Water Board">
+                        <div class="invalid-feedback">Agency name is required.</div>
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <label for="mun-capacity">Estimated Flow Demand (MGD)&nbsp;*</label>
+                        <input type="text" id="mun-capacity" class="form-control" required placeholder="e.g. 5.5 MGD">
+                        <div class="invalid-feedback">Capacity demand is required.</div>
+                      </div>
+                    </div>
 
-                <div class="form-group">
-                  <label for="mun-scope">Consultation Focus&nbsp;*</label>
-                  <select id="mun-scope" class="form-select" required>
-                    <option value="" disabled selected>Choose focus area...</option>
-                    <option value="drinking">Community Drinking Water Grid</option>
-                    <option value="desal">Seawater Desalination Plant</option>
-                    <option value="reuse">Wastewater Treatment & Reclamation</option>
-                    <option value="retro">SCADA System Modernization</option>
-                  </select>
-                  <div class="invalid-feedback">Please select a consultation focus.</div>
-                </div>
+                    <div class="form-group">
+                      <label for="mun-scope">Consultation Focus&nbsp;*</label>
+                      <select id="mun-scope" class="form-select" required>
+                        <option value="" disabled selected>Choose focus area...</option>
+                        <option value="drinking">Community Drinking Water Grid</option>
+                        <option value="desal">Seawater Desalination Plant</option>
+                        <option value="reuse">Wastewater Treatment & Reclamation</option>
+                        <option value="retro">SCADA System Modernization</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a consultation focus.</div>
+                    </div>
 
-                <div class="form-group">
-                  <label for="mun-project">Project Scope, Tender Guidelines, or General Requirements</label>
-                  <textarea id="mun-project" rows="4" class="form-control" placeholder="Specify geographic conditions, water chemical profiles, regulatory concerns, or general tender codes if available..."></textarea>
-                </div>
+                    <div class="form-group">
+                      <label for="mun-project">Project Scope, Tender Guidelines, or General Requirements</label>
+                      <textarea id="mun-project" rows="4" class="form-control" placeholder="Specify geographic conditions, water chemical profiles, regulatory concerns, or general tender codes if available..."></textarea>
+                    </div>
 
-                <div class="text-center mt-4">
-                  <button type="submit" class="btn btn-premium w-100 py-3 btn-solution-form">Submit Municipal Request</button>
+                    <div class="text-center mt-4">
+                      <button type="submit" class="btn btn-premium w-100 py-3 btn-solution-form">Submit Municipal Request</button>
+                    </div>
+                  </form>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

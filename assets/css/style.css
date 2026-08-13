@@ -121,7 +121,9 @@ p {
   padding: 0.5rem 1rem !important;
 }
 
-.nav-link:hover, .nav-link.active {
+.premium-navbar .nav-link:hover, 
+.premium-navbar .nav-link.active,
+.premium-navbar .nav-link.show {
   color: var(--accent-color) !important;
 }
 
@@ -138,7 +140,9 @@ p {
   transition: transform 0.3s ease;
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.premium-navbar .nav-link:hover::after, 
+.premium-navbar .nav-link.active::after,
+.premium-navbar .nav-link.show::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -1177,4 +1181,33 @@ p {
     padding: 0.55rem 0.9rem !important;
   }
 }
+
+/* Hero Page Header CSS */
+.hero-page-header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white !important;
+  padding: 6rem 0 !important;
+  border-radius: 0 0 24px 24px;
+}
+.hero-page-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 25, 47, 0.75); /* Dark overlay */
+  z-index: 1;
+}
+.hero-page-header .container {
+  position: relative;
+  z-index: 2;
+}
+.hero-page-header .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.hero-page-header .body-lead {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
 
