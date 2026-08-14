@@ -226,6 +226,11 @@ p {
   color: var(--bg-primary) !important;
 }
 
+.btn-hero {
+  min-width: 240px;
+  text-align: center;
+}
+
 /* Hero Section */
 .hero-wrapper {
   position: relative;
